@@ -51,13 +51,13 @@
 //
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 //----------------------------------------------------------------------------------------------------------------------
-let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-
-document.write('<ul>');
-for (let item of listOfItems) {
-    document.write(`<li>${item}</li>`)
-}
-document.write('</ul>');
+// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+//
+// document.write('<ul>');
+// for (let item of listOfItems) {
+//     document.write(`<li>${item}</li>`)
+// }
+// document.write('</ul>');
 //----------------------------------------------------------------------------------------------------------------------
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону
@@ -119,7 +119,7 @@ document.write('</ul>');
 //     document.write(`
 //         <div>
 //             <h3>${item.title}. Price - ${item.price}</h3>
-//             <img src=${item.image} alt="" class="product-image" style="width: 200px">
+//             <img src=${item.image} alt="" style="width: 200px">
 //         </div>
 //     `)
 // }
