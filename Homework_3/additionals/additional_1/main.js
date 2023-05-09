@@ -260,24 +260,68 @@
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
 //----------------------------------------------------------------------------------------------------------------------
-let books = [
-    {title: 'Fairy Tail', pages: 356, authors: 'Hiro Mashima', genres: ['Adventures','Fantasy']},
-    {title: 'Naruto', pages: 750, authors: ['Kishimoto Masashi',"Kishimoto's students"], genres: ['Martial arts','Adventure','Fantasy']},
-    {title: 'One Piece', pages: 1060, authors: 'Oda Eishiro', genres: ['Adventure','Fantasy']},
-    {title: 'Black Clover', pages: 190, authors: 'Yuki Tabata', genres: ['Adventure','Fantasy']},
-    {title: 'Bleach', pages: 356, authors: 'Kubo Tayto', genres: ['Comedy', 'Drama', 'Mystery', 'Action', 'Fantasy']},
-];
-for (let i = 0; i < books.length; i++) {
-}
-
-
-
-
+// let books = [
+//     {title: 'Fairy Tail', pages: 356, authors: ['Hiro Mashima'], genres: ['Adventures','Fantasy']},
+//     {title: 'Naruto', pages: 750, authors: ['Kishimoto Masashi',"Kishimoto's students"], genres: ['Martial arts','Adventure','Fantasy']},
+//     {title: 'One Piece', pages: 1060, authors: ['Oda Eishiro'], genres: ['Adventure','Fantasy']},
+//     {title: 'Black Clover', pages: 190, authors: ['Yuki Tabata'], genres: ['Adventure','Fantasy']},
+//     {title: 'Bleach', pages: 356, authors: ['Kubo Tayto'], genres: ['Comedy', 'Drama', 'Mystery', 'Action', 'Fantasy']},
+// ];
 //----------------------------------------------------------------------------------------------------------------------
+// -знайти наібльшу книжку.
+// let maxPages = ['',0];
+// for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//
+//     if (maxPages[1] < book.pages) {
+//         maxPages[1] = book.pages;
+//         maxPages[0] = book.title;
+//     }
+// }
+// console.log(maxPages);
 //----------------------------------------------------------------------------------------------------------------------
+// - знайти книжку/ки з найбільшою кількістю жанрів
 //----------------------------------------------------------------------------------------------------------------------
+// let maxGenres = ['',0];
+// for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//
+//     if (maxGenres[1] < book.genres.length) {
+//         maxGenres[1] = book.genres.length;
+//         maxGenres[0] = book.title;
+//     }
+// }
+// console.log(maxGenres);
 //----------------------------------------------------------------------------------------------------------------------
+// - знайти книжку/ки з найдовшою назвою
 //----------------------------------------------------------------------------------------------------------------------
+// let maxTitle = ['',0];
+// for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//     if (maxTitle[1] < book.title.length) {
+//         maxTitle[1] = book.title.length;
+//         maxTitle[0] = book.title;
+//     }
+// }
+// console.log(maxTitle);
 //----------------------------------------------------------------------------------------------------------------------
+// - знайти книжку/ки які писали 2 автори
 //----------------------------------------------------------------------------------------------------------------------
+// for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//
+//     if (book.authors.length === 2) {
+//         console.log(book);
+//     }
+// }
+//----------------------------------------------------------------------------------------------------------------------
+// - знайти книжку/ки які писав 1 автор
+//----------------------------------------------------------------------------------------------------------------------
+// for (let i = 0; i < books.length; i++) {
+//     const book = books[i];
+//
+//     if (book.authors.length === 1) {
+//         console.log(book);
+//     }
+// }
 //----------------------------------------------------------------------------------------------------------------------
