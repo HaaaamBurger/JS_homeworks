@@ -158,35 +158,35 @@
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 //----------------------------------------------------------------------------------------------------------------------
-function exchange(sumUAH, currencyValues, exchangeCurrency) {
-    let money = {sumUAH, currencyValues, exchangeCurrency};
-
-    return {
-        getValues: function () {
-            return {sumUAH, currencyValues, exchangeCurrency};
-        },
-        setValues: function (value, currency, exchange) {
-            if (value > 0 && currency && exchange > 0) {
-                sumUAH = value;
-                currencyValues = currency;
-                exchangeCurrency = exchange;
-                return 'All values are appropriate!';
-            } else {
-                return 'Something went wrong!';
-            }
-        },
-        calculateValues: function () {
-            if (sumUAH && exchangeCurrency) {
-                let result = sumUAH / exchangeCurrency;
-                return `Value: ${sumUAH} UAH\nExchange currency: ${exchangeCurrency} ${currencyValues}\nResult: ${result} UAH`
-            } else {
-                console.log('Ooops...');
-            }
-        }
-    }
-}
-
-let manipulator = exchange();
-console.log(manipulator.setValues(1, 'USD', 32))
-console.log(manipulator.calculateValues());
+// function exchange(sumUAH, currencyValues, exchangeCurrency) {
+//     let money = {sumUAH, currencyValues, exchangeCurrency};
+//
+//     return {
+//         getValues: function () {
+//             return {sumUAH, currencyValues, exchangeCurrency};
+//         },
+//         setValues: function (value, currency, exchange) {
+//             if (value > 0 && currency && exchange > 0) {
+//                 sumUAH = value;
+//                 currencyValues = currency;
+//                 exchangeCurrency = exchange;
+//                 return 'All values are appropriate!';
+//             } else {
+//                 return 'Something went wrong!';
+//             }
+//         },
+//         calculateValues: function () {
+//             if (sumUAH && exchangeCurrency) {
+//                 let result = sumUAH / exchangeCurrency;
+//                 return `Value: ${sumUAH} UAH\nExchange currency: ${exchangeCurrency} ${currencyValues}\nResult: ${result} UAH`
+//             } else {
+//                 console.log('Ooops...');
+//             }
+//         }
+//     }
+// }
+//
+// let manipulator = exchange();
+// console.log(manipulator.setValues(1, 'USD', 32))
+// console.log(manipulator.calculateValues());
 //----------------------------------------------------------------------------------------------------------------------
