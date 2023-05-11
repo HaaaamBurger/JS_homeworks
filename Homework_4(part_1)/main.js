@@ -165,15 +165,18 @@ function exchange(sumUAH,currencyValues,exchangeCurrency) {
         getValues: function () {
             return {sumUAH,currencyValues, exchangeCurrency};
         },
-        setValues: function (sumUAH, currencyValues, exchangeCurrency) {
-            if (sumUAH > 0 && currencyValues && exchangeCurrency > 0) {
+        setValues: function (value, currency, exchange) {
+            if (value > 0 && currency && exchange > 0) {
+                sumUAH = value;
+                currencyValues = currency;
+                exchangeCurrency = exchange;
                 return 'All values are appropriate!';
             } else {
                 return 'Something went wrong!';
             }
         },
         calculateValues: function () {
-            if (!this.setValues) {
+            if (this.setValues) {
                 let result = sumUAH / exchangeCurrency;
                 return `Value: ${sumUAH} UAH\nExchange currency: ${exchangeCurrency} ${currencyValues}\nResult: ${result} UAH`
             } else {
@@ -182,7 +185,7 @@ function exchange(sumUAH,currencyValues,exchangeCurrency) {
         }
     }
 }
-let manipulator = exchange(0, 'USD', 0);
-console.log(manipulator.setValues())
+let manipulator = exchange();
+console.log(manipulator.setValues(100, 'USD', 32))
 console.log(manipulator.calculateValues())
 //----------------------------------------------------------------------------------------------------------------------
