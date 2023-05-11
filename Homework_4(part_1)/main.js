@@ -158,30 +158,31 @@
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 //----------------------------------------------------------------------------------------------------------------------
-// function exchange(sumUAH,currencyValues,exchangeCurrency) {
-//     let money = {sumUAH, currencyValues, exchangeCurrency};
-//
-//     return {
-//         getValues: function () {
-//             return {sumUAH,currencyValues, exchangeCurrency};
-//         },
-//         setValues: function () {
-//             if (sumUAH > 0 && currencyValues && exchangeCurrency > 0) {
-//                 return 'All values are appropriate!';
-//             } else {
-//                 return 'Something went wrong!';
-//             }
-//         },
-//         calculateValues: function () {
-//             if (this.setValues) {
-//                 let result = sumUAH / exchangeCurrency;
-//                 return `Value: ${sumUAH} UAH\nExchange currency: ${exchangeCurrency} ${currencyValues}\nResult: ${result} UAH`
-//             } else {
-//                 return 'Values are inappropriate!';
-//             }
-//         }
-//     }
-// }
-// let manipulator = exchange(500, 'USD', 42);
-// console.log(manipulator.calculateValues());
+function exchange(sumUAH,currencyValues,exchangeCurrency) {
+    let money = {sumUAH, currencyValues, exchangeCurrency};
+
+    return {
+        getValues: function () {
+            return {sumUAH,currencyValues, exchangeCurrency};
+        },
+        setValues: function (sumUAH, currencyValues, exchangeCurrency) {
+            if (sumUAH > 0 && currencyValues && exchangeCurrency > 0) {
+                return 'All values are appropriate!';
+            } else {
+                return 'Something went wrong!';
+            }
+        },
+        calculateValues: function () {
+            if (!this.setValues) {
+                let result = sumUAH / exchangeCurrency;
+                return `Value: ${sumUAH} UAH\nExchange currency: ${exchangeCurrency} ${currencyValues}\nResult: ${result} UAH`
+            } else {
+                return 'Values are inappropriate!';
+            }
+        }
+    }
+}
+let manipulator = exchange(0, 'USD', 0);
+console.log(manipulator.setValues())
+console.log(manipulator.calculateValues())
 //----------------------------------------------------------------------------------------------------------------------
