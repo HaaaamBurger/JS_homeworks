@@ -73,14 +73,14 @@
 // sortNums([3,11,21],'ascending');
 //----------------------------------------------------------------------------------------------------------------------
 // - є масив
-let coursesAndDurationArray = [
-    {title: 'JavaScript Complex', monthDuration: 5},
-    {title: 'Java Complex', monthDuration: 6},
-    {title: 'Python Complex', monthDuration: 6},
-    {title: 'QA Complex', monthDuration: 4},
-    {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
-];
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
 // -- відсортувати його за спаданням за monthDuration
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
@@ -95,7 +95,82 @@ let coursesAndDurationArray = [
 //----------------------------------------------------------------------------------------------------------------------
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
 //----------------------------------------------------------------------------------------------------------------------
-
+// console.log(coursesAndDurationArray.map((value, index) => ({
+//     id: index + 1,
+//     title: value.title,
+//     monthDuration: value.monthDuration
+// })));
 //----------------------------------------------------------------------------------------------------------------------
+// описати колоду карт (від 6 до туза без джокерів)
+// - знайти піковий туз
+// - всі шістки
+// - всі червоні карти
+// - всі буби
+// - всі трефи від 9 та більше
+//
+// {
+//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
+//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
+//     color:'', // 'red','black'
+// }
+//----------------------------------------------------------------------------------------------------------------------
+// let cards = [
+//     { cardSuit: 'spade', value: '6', color: 'black' },
+//     { cardSuit: 'diamond', value: '6', color: 'red' },
+//     { cardSuit: 'heart', value: '6', color: 'red' },
+//     { cardSuit: 'clubs', value: '6', color: 'black' },
+//     { cardSuit: 'spade', value: '7', color: 'black' },
+//     { cardSuit: 'diamond', value: '7', color: 'red' },
+//     { cardSuit: 'heart', value: '7', color: 'red' },
+//     { cardSuit: 'clubs', value: '7', color: 'black' },
+//     { cardSuit: 'spade', value: '8', color: 'black' },
+//     { cardSuit: 'diamond', value: '8', color: 'red' },
+//     { cardSuit: 'heart', value: '8', color: 'red' },
+//     { cardSuit: 'clubs', value: '8', color: 'black' },
+//     { cardSuit: 'spade', value: '9', color: 'black' },
+//     { cardSuit: 'diamond', value: '9', color: 'red' },
+//     { cardSuit: 'heart', value: '9', color: 'red' },
+//     { cardSuit: 'clubs', value: '9', color: 'black' },
+//     { cardSuit: 'spade', value: '10', color: 'black' },
+//     { cardSuit: 'diamond', value: '10', color: 'red' },
+//     { cardSuit: 'heart', value: '10', color: 'red' },
+//     { cardSuit: 'clubs', value: '10', color: 'black' },
+//     { cardSuit: 'spade', value: 'jack', color: 'black' },
+//     { cardSuit: 'diamond', value: 'jack', color: 'red' },
+//     { cardSuit: 'heart', value: 'jack', color: 'red' },
+//     { cardSuit: 'clubs', value: 'jack', color: 'black' },
+//     { cardSuit: 'spade', value: 'queen', color: 'black' },
+//     { cardSuit: 'diamond', value: 'queen', color: 'red' },
+//     { cardSuit: 'heart', value: 'queen', color: 'red' },
+//     { cardSuit: 'clubs', value: 'queen', color: 'black' },
+//     { cardSuit: 'spade', value: 'king', color: 'black' },
+//     { cardSuit: 'diamond', value: 'king', color: 'red' },
+//     { cardSuit: 'heart', value: 'king', color: 'red' },
+//     { cardSuit: 'clubs', value: 'king', color: 'black' },
+//     { cardSuit: 'spade', value: 'ace', color: 'black' },
+//     { cardSuit: 'diamond', value: 'ace', color: 'red' },
+//     { cardSuit: 'heart', value: 'ace', color: 'red' },
+//     { cardSuit: 'clubs', value: 'ace', color: 'black' },
+// ];
+//----------------------------------------------------------------------------------------------------------------------
+// - знайти піковий туз
+//----------------------------------------------------------------------------------------------------------------------
+// console.log(cards.find(value => value.cardSuit === 'spade' && value.value === 'ace'));
+//----------------------------------------------------------------------------------------------------------------------
+// - всі шістки
+//----------------------------------------------------------------------------------------------------------------------
+// cards.find(value => value.value === '6' ? console.log(value) : null);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі червоні карти
+//----------------------------------------------------------------------------------------------------------------------
+// cards.find(value => value.color === 'red' ? console.log(value) : null);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі буби
+//----------------------------------------------------------------------------------------------------------------------
+// cards.find(value => value.cardSuit === 'diamond' ? console.log(value) : null);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі трефи від 9 та більше
+//----------------------------------------------------------------------------------------------------------------------
+// cards.find(value => value.value !== '6' && value.value !== '7' && value.value !== '8' && value.cardSuit !== 'clubs' ? console.log(value) : null);
 //----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
