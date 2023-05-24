@@ -13,31 +13,116 @@
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
 //----------------------------------------------------------------------------------------------------------------------
-function User(id, name, surname , email, phone) {
-    this.id = id;
-    this.name = name;
-    this.surname = surname;
-    this.email = email;
-    this.phone = phone;
-}
-
-const user = [
-    new User(1, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(2, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(3, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(4, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(5, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(6, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(7, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(8, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(9, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-    new User(10, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
-];
+// function User(id, name, surname , email, phone) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+// }
+//
+// const user = [
+//     new User(1, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(2, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(3, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(4, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(5, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(6, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(7, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(8, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(9, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+//     new User(10, 'Sanya', 'Melnyk', 'kunlem2004y@gmail.com', '0682279237'),
+// ];
 // console.log(user);
 //----------------------------------------------------------------------------------------------------------------------
 // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
 //----------------------------------------------------------------------------------------------------------------------
-console.log(user.filter(value => value.id % 2 === 0));
+// let filteredUser = user.filter(value => value.id % 2 === 0);
+// console.log(filteredUser);
+//----------------------------------------------------------------------------------------------------------------------
+// - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+//----------------------------------------------------------------------------------------------------------------------
+// console.log(filteredUser.sort((a, b) => a.id - b.id));
+//----------------------------------------------------------------------------------------------------------------------
+// - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об'єктами Client
+//----------------------------------------------------------------------------------------------------------------------
+// function Client(id, name, surname , email, phone, order) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+//     this.order = order;
+// }
+// let main = [
+//     new Client(1,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber']),
+//     new Client(2,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'cucumber']),
+//     new Client(3,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber','pear']),
+//     new Client(4,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber','guava','plum']),
+//     new Client(5,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana']),
+//     new Client(6,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber']),
+//     new Client(7,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange']),
+//     new Client(8,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber', 'pineapple']),
+//     new Client(9,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana']),
+//     new Client(10,'Sanya', 'Melnuk', 'kunlem2004y@gmail.com', '0682279237', ['banana', 'orange', 'cucumber']),
+// ];
+// console.log(main);
+//----------------------------------------------------------------------------------------------------------------------
+// - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+//----------------------------------------------------------------------------------------------------------------------
+// console.log(main.sort((a, b) => a.order.length - b.order.length));
+//----------------------------------------------------------------------------------------------------------------------
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+//----------------------------------------------------------------------------------------------------------------------
+function Car(model, developer, year, maxSpeed, volume) {
+    this.model = model;
+    this.developer = developer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.volume = volume;
+    this.drive = function () {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    };
+    this.info = function () {
+        console.log(`
+            Model: ${this.model}
+            Developer: ${this.developer}
+            Year: ${this.year}
+            Max Speed: ${this.maxSpeed}
+            Volume: ${this.volume}
+        `)
+    };
+    this.increaseMaxSpeed = function (newSpeed) {
+        if (newSpeed > this.maxSpeed) {
+            this.maxSpeed = newSpeed;
+            console.log(`New speed: ${this.maxSpeed} km/h`);
+        } else {
+            console.log(`Your value: ${newSpeed} km/h - Current max speed: ${maxSpeed} km/h`);
+        }
+    };
+    this.changeYear = function (newValue) {
+        if (newValue) {
+            this.year = newValue;
+            console.log(`New year is ${this.year}`);
+        } else {
+            console.log('Error!');
+        }
+    }
+    this.addDriver = function (driver) {
+
+    }
+}
+const car = new Car('X', 'Tesla', '2016', 250, 'electro');
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------------
