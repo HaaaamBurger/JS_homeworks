@@ -146,7 +146,7 @@
 // const delete_characters = (str, length) => {
 //     str.split(' ').forEach(word => word.length === length ? console.log(word) : null);
 // }
-// delete_characters(str, 7);
+// delete_characters(str, 6);
 //----------------------------------------------------------------------------------------------------------------------
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
@@ -250,6 +250,7 @@
 //     }
 //     return validatorStatus[0].dog && validatorStatus[1].dot ? console.log('Validated!') : console.log('Validation failed ;(')
 // }
+// emailValidator('melnuk2004y@gmail.com');
 //Мені майже вдалось зробити це завдання через reduce, але я не знав як там зробити цю дію email[i + 3], тому не зміг(
 //----------------------------------------------------------------------------------------------------------------------
 // let coursesArray = [
@@ -345,13 +346,13 @@
 // - знайти книжку/ки які писав 1 автор
 // - вісортувати книжки по кількості сторінок по зростанню
 //----------------------------------------------------------------------------------------------------------------------
-let books = [
-    {title: 'Fairy Tail', pages: 356, authors: ['Hiro Mashima'], genres: ['Adventures','Fantasy']},
-    {title: 'Naruto', pages: 750, authors: ['Kishimoto Masashi',"Kishimoto's students"], genres: ['Martial arts','Adventure','Fantasy']},
-    {title: 'One Piece', pages: 1060, authors: ['Oda Eishiro'], genres: ['Adventure','Fantasy']},
-    {title: 'Black Clover', pages: 190, authors: ['Yuki Tabata'], genres: ['Adventure','Fantasy']},
-    {title: 'Bleach', pages: 356, authors: ['Kubo Tayto'], genres: ['Comedy', 'Drama', 'Mystery', 'Action', 'Fantasy']},
-];
+// let books = [
+//     {title: 'Fairy Tail', pages: 356, authors: ['Hiro Mashima'], genres: ['Adventures','Fantasy']},
+//     {title: 'Naruto', pages: 750, authors: ['Kishimoto Masashi',"Kishimoto's students"], genres: ['Martial arts','Adventure','Fantasy']},
+//     {title: 'One Piece', pages: 1060, authors: ['Oda Eishiro'], genres: ['Adventure','Fantasy']},
+//     {title: 'Black Clover', pages: 190, authors: ['Yuki Tabata'], genres: ['Adventure','Fantasy']},
+//     {title: 'Bleach', pages: 356, authors: ['Kubo Tayto'], genres: ['Comedy', 'Drama', 'Mystery', 'Action', 'Fantasy']},
+// ];
 //----------------------------------------------------------------------------------------------------------------------
 // -знайти наібльшу книжку.
 //----------------------------------------------------------------------------------------------------------------------
