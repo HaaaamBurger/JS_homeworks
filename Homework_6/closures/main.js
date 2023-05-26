@@ -1,5 +1,5 @@
 function UserCard(number) {
-    const cardTemplate = {balance: 100, transactionLimit: 100,historyLogs: [], key: number,};
+    const cardTemplate = {balance: 100, transactionLimit: 100,historyLogs: [], key: number};
 
     this.getCardOptions = function (){
         return {
@@ -37,7 +37,7 @@ function UserCard(number) {
 
     this.transferCredits = function (credits, recipient) {
         if (credits > 0 && cardTemplate.balance >= credits) {
-            credits -= (credits / 100) * 0.5;
+            cardTemplate.balance -= (credits / 100) * 0.5;
             cardTemplate.balance -= credits;
             recipient.putCredits(credits);
         } else if (credits < 0){
@@ -45,6 +45,8 @@ function UserCard(number) {
         } else {
             console.error('Something went wrong !');
         }
+
+        cardTemplate.historyLogs.push({operationType: 'Withdrawal of credits', credits: credits + (credits / 100) * 0.5, operationTime: new Date()});
     }
 }
 
@@ -61,11 +63,11 @@ function UserAccount(name) {
     this.getCardById = function (cardKey) {
         switch (cardKey) {
             case 1:
-                return this.cards[0].getCardOptions();
+                return this.cards[0];
             case 2:
-                return this.cards[1].getCardOptions();
+                return this.cards[1];
             case 3:
-                return this.cards[2].getCardOptions();
+                return this.cards[2];
             default:
                 console.error('Something went wrong !');
         }
@@ -80,12 +82,9 @@ let card2 = user.getCardById(2);
 
 card1.putCredits(500);
 card1.setTransactionLimit(800);
-card1.transferCredits(300,card2);
+card1.transferCredits(300, card2);
 
 card2.takeCredits(50);
 
 console.log(card1.getCardOptions());
-
-
-
-
+console.log(card2.getCardOptions());
