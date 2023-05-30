@@ -246,38 +246,25 @@ let usersList = [
 //----------------------------------------------------------------------------------------------------------------------
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
 //----------------------------------------------------------------------------------------------------------------------
-const arrayExplorer = (array) => {
-    if (Array.isArray(array)) {
-        for (let item of array) {
-            for (let field in item) {
-                const div = document.createElement('div');
-                if (typeof item[field] !== 'object') {
-                    div.innerText = `${field} - ${item[field]}`;
-                    document.body.appendChild(div);
-                } else {
-                    div.innerText = `${field}: `;
-                    document.body.appendChild(div);
-                }
-                if (typeof item[field] === 'object') {
-                    arrayExplorer(item[field]);
-                }
-            }
-        }
-    } else {
-        for (let field in array) {
-            const div = document.createElement('div');
-            if (typeof array[field] !== 'object') {
-                div.innerText = `${field} - ${array[field]}`;
-                document.body.appendChild(div);
-            } else {
-                div.innerText = `${field}: `;
-                document.body.appendChild(div);
-            }
-            if (typeof array[field] === 'object') {
-                arrayExplorer(array[field]);
-            }
-        }
-    }
-}
-arrayExplorer(usersList);
+
+// const arrayExplorer = (array) => {
+//     for (let item of array) {
+//         for (let field in item) {
+//             if (typeof item[field] !== 'object') {
+//                 const div = document.createElement('div');
+//                 div.innerText = `${field} - ${item[field]}`;
+//                 document.body.appendChild(div);
+//             } else if (typeof item[field] === 'object') {
+//                 const div = document.createElement('div');
+//                 div.innerText = `${field}: `;
+//                 document.body.appendChild(div);
+//             }
+//
+//             if (typeof item[field] === 'object') {
+//                 arrayExplorer([item[field]]);
+//             }
+//         }
+//     }
+// }
+// arrayExplorer(usersList)
 //----------------------------------------------------------------------------------------------------------------------
