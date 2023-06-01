@@ -29,14 +29,31 @@
 //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
 //======================================================================================================================
-let generalMount = 0;
+localStorage.setItem('money', '100');
+let generalMount = JSON.parse(localStorage.getItem('money'));
 
-const moneyCount = document.getElementsByClassName('moneyCount')[0];
 const a = document.getElementById('setMoney');
 a.innerHTML = `${generalMount}`;
 
 window.onload = () => {
+    a.innerHTML = `${generalMount}`;
+    const mainTime = new Date().getTime();
+
+    let openTime = JSON.parse(localStorage.getItem('openTime')) || [];
+    openTime.push(mainTime);
+
+    if (openTime.length > 1) {
+        if (openTime[openTime.length - 1] - openTime[openTime.length - 2] >= 2000) {
+            let money = JSON.parse(localStorage.getItem('money'));
+            money += 20;
+            localStorage.setItem('money', JSON.stringify(money));
+
+        }
+    }
+
+    localStorage.setItem('openTime', JSON.stringify(openTime));
 
 }
+
 
 //======================================================================================================================
