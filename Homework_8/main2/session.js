@@ -3,11 +3,11 @@ const data = JSON.parse(localStorage.getItem('session'));
 const h2 = document.createElement('h2');
 h2.innerHTML = 'Session time:';
 
-const mainWrapper = document.createElement('div');
+const backLink = document.createElement('a');
+backLink.innerHTML = 'Back';
+backLink.setAttribute('href','index.html');
 
-// const backLink = document.createElement('a');
-// backLink.document.createAttribute('link');
-// backLink.value = 'index.html'
+const mainWrapper = document.createElement('div');
 
 for (let item of data) {
     const ul = document.createElement('ul');
@@ -18,6 +18,6 @@ for (let item of data) {
 
     mainWrapper.appendChild(ul);
 }
-document.body.append(h2,mainWrapper);
+document.body.append(h2,mainWrapper,backLink);
 
 
