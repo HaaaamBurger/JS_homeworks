@@ -40,7 +40,7 @@ window.onload = () => {
     openTime.push(mainTime);
 
     if (openTime.length > 1) {
-        if (openTime[openTime.length - 1] - openTime[openTime.length - 2] >= 2000) {
+        if (openTime[openTime.length - 1] - openTime[openTime.length - 2] >= 10000) {
             generalMount += 20;
             localStorage.setItem('money', JSON.stringify(generalMount));
         }
