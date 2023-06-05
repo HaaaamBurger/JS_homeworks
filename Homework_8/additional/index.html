@@ -10,17 +10,18 @@
 <!--//     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.-->
 <!--// (Додатковачастина для завдання)-->
 <!--//======================================================================================================================-->
-<!--<div>-->
-<!--    <form action="" name="form1">-->
-<!--        <input type="text" name="rowCount" placeholder="rows">-->
-<!--        <input type="text" name="columnCount" placeholder="columns">-->
-<!--        <input type="text" name="value" placeholder="value">-->
-<!--        <button>Create</button>-->
-<!--    </form>-->
-<!--</div>-->
-<!--<div>-->
-<!--    <table class="generalTable"  style="width:100%"></table>-->
-<!--</div>-->
+<div style="display: flex">
+    <form action="" name="form1" style="margin-right: 5px">
+        <input type="text" name="rowCount" placeholder="rows">
+        <input type="text" name="columnCount" placeholder="columns">
+        <input type="text" name="value" placeholder="value">
+        <button class="submitButton">Create</button>
+    </form>
+    <button class="resetButton">Reset</button>
+</div>
+<div>
+    <table class="generalTable"  style="width:100%"></table>
+</div>
 <!--//======================================================================================================================-->
 <!--//     *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення "100грн"-->
 <!--// при перезавантаженні сторінки до значаення додається по 10грн, але !!!-->

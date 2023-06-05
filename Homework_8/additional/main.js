@@ -3,26 +3,35 @@
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 //======================================================================================================================
-// const form = document.form1;
-// const rowCount = document.form1.rowCount;
-// const columnCount = document.form1.columnCount;
-// const value = document.form1.value;
-//
-// form.onsubmit = function (e) {
-//     e.preventDefault();
-//     const table = document.getElementsByClassName('generalTable')[0];
-//
-//     for (let i = 0; i < +columnCount.value; i++) {
-//         const tr = document.createElement('tr');
-//
-//         for (let j = 0; j < +rowCount.value; j++) {
-//             const th = document.createElement('th');
-//             th.innerText = `${value.value}`;
-//             tr.appendChild(th);
-//         }
-//         table.appendChild(tr);
-//     }
-// }
+const form = document.form1;
+const rowCount = document.form1.rowCount;
+const columnCount = document.form1.columnCount;
+const value = document.form1.value;
+const button = document.getElementsByClassName('submitButton')[0];
+
+const table = document.getElementsByClassName('generalTable')[0];
+form.onsubmit = function (e) {
+    e.preventDefault();
+
+    for (let i = 0; i < +columnCount.value; i++) {
+        const tr = document.createElement('tr');
+
+        for (let j = 0; j < +rowCount.value; j++) {
+            const th = document.createElement('th');
+            th.innerText = `${value.value}`;
+            tr.appendChild(th);
+        }
+        table.appendChild(tr);
+    }
+    button.setAttribute('disabled', 'disabled');
+}
+
+const reset = document.getElementsByClassName('resetButton')[0];
+
+reset.onclick = () => {
+    button.removeAttribute('disabled');
+    table.innerText = '';
+}
 //======================================================================================================================
 //     *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення "100грн"
 // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
