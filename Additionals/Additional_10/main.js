@@ -64,21 +64,68 @@
 // div_5.style.borderRadius = '0 0 3px 3px';
 //
 // let counter = 0;
-// mainMenu.onclick = () => {
-//     if (counter % 2 === 0) {
-//         navElements.append(div_1,div_2,div_3,div_4,div_5);
-//         counter++;
-//         console.log(counter);
-//     } else {
-//         div_1.remove();
-//         div_2.remove();
-//         div_3.remove();
-//         div_4.remove();
-//         div_5.remove();
-//         counter++;
-//         console.log(counter);
-//     }
+// const addElements = () => {
+//     navElements.append(div_1,div_2,div_3,div_4,div_5);
+//     counter++;
 // }
-
-
+// const removeElements = () => {
+//     navElements.innerHTML = '';
+//     counter++;
+// }
+//
+// mainMenu.onclick = () => {
+//     (counter % 2 === 0) ? addElements() : removeElements();
+// }
+//---------------------------------------------------
+// - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
+//     Вывести список комментариев в документ, каждый в своем блоке.
+//     Добавьте каждому комментарию по кнопке для сворачивания его body.
+//---------------------------------------------------
+// const comments = [
+//     {title: 'A powerful argument!', body: 'I commend you for your quick thinking.'},
+//     {title: 'Good for you', body: 'Phenomenal'},
+//     {title: 'Fine job', body: 'Now you\'ve figured it out.'},
+//     {title: 'I appreciate your cooperation.', body: 'Right on target'},
+//     {title: 'Brilliant', body: 'I noticed that you got right down to work.'},
+//     {title: 'Desirable', body: 'It looks like you\'ve put a lot of work into this.'},
+//     {title: 'Excellent', body: 'Keep up the good work.'},
+//     {title: 'Astounding', body: 'I like the way you\'ve handled this.'},
+//     {title: 'Fantastic', body: 'Nice going'},
+//     {title: 'First-class', body: 'Oh, that looks like you\'re ready for grade!\n'},
+// ];
+// const commentWrapper = document.getElementsByClassName('commentWrapper')[0];
+//
+//
+// comments.forEach(comment => {
+//     const div = document.createElement('div');
+//     const h3 = document.createElement('h3');
+//     h3.innerText = `${comment.title}`;
+//
+//     const commentInfo = document.createElement('div');
+//     const p = document.createElement('p');
+//     p.innerText = `${comment.body}`;
+//     const button = document.createElement('button');
+//     button.innerText = 'Hide';
+//     commentInfo.append(p,button);
+//
+//     let counter = 0;
+//
+//     const hideInfo = () => {
+//         button.innerText = 'Show';
+//         p.innerText = '';
+//         counter++;
+//     }
+//     const showInfo = () => {
+//         button.innerText = 'Hide';
+//         p.innerText = `${comment.body}`;
+//         counter++;
+//     }
+//
+//     button.onclick = () => {
+//         (counter % 2 === 0) ? hideInfo() : showInfo();
+//     }
+//
+//     div.append(h3, commentInfo);
+//     document.body.appendChild(div);
+// })
 //---------------------------------------------------
