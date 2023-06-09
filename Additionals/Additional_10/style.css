@@ -1,0 +1,28 @@
+.buttonMenu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #c8c8c8;
+    color: white;
+
+}
+.buttonMenu div {
+
+    border-radius: 2px;
+    width: 100%;
+    height: 7px;
+    background-color: gray;
+}
+.buttonMenu div:nth-child(2) {
+    margin: 5px 0 5px 0;
+}
+.specialClass {
+    background-color: #dadada;
+}
+.specialClass:hover{
+    background-color: #28a6fd;
+}
